@@ -25,8 +25,10 @@ h1, h2 {
 
 .artist-photo {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 150px; /* Размер фото */
+    height: 150px; /* Размер фото */
+    object-fit: cover; /* Чтобы фото хорошо вписывалось в круг */
+    margin-bottom: 20px; /* Отступ снизу */
 }
 
 .artist-name {
