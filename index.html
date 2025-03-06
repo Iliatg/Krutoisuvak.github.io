@@ -3,23 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krutoisuvak</title>
+    <title>Krutoisuvak - Артист</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <img src="avatar.jpg" alt="Krutoisuvak" class="avatar">
-        <h1>Krutoisuvak</h1>
-        <p>Музыкант | Контент-мейкер</p>
-        
-        <div class="links">
-            <a href="https://youtube.com/@krutoisuvak" target="_blank">YouTube</a>
-            <a href="https://t.me/krutoisuvak" target="_blank">Telegram</a>
-            <a href="https://soundcloud.com/krutoisuvak" target="_blank">SoundCloud</a>
-            <a href="https://instagram.com/krutoisuvak" target="_blank">Instagram</a>
-        </div>
+    <!-- Карточка артиста -->
+    <div class="artist-card">
+        <div class="artist-info">
+            <img src="https://via.placeholder.com/150" alt="Фото артиста" class="artist-photo">
+            <h1 class="artist-name">Krutoisuvak</h1>
+            <p class="artist-description">
+                Привет, я Krutoisuvak — музыкант и создатель уникальных треков. Добро пожаловать на мой сайт!
+            </p>
 
-        <p class="copyright">© 2025 Krutoisuvak</p>
+            <!-- Социальные сети -->
+            <div class="social-links">
+                <a href="https://www.instagram.com/krutoisuvak" target="_blank" class="social-icon">Instagram</a>
+                <a href="https://www.tiktok.com/@krutoisuvak" target="_blank" class="social-icon">TikTok</a>
+                <a href="https://soundcloud.com/krutoisuvak" target="_blank" class="social-icon">SoundCloud</a>
+                <a href="https://www.youtube.com/c/krutoisuvak" target="_blank" class="social-icon">YouTube</a>
+            </div>
+        </div>
     </div>
+
+    <!-- Музыкальный плеер -->
+    <div class="music-player">
+        <h2>Слушай мою музыку</h2>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+            Ваш браузер не поддерживает элемент audio.
+        </audio>
+    </div>
+
+    <!-- Форма подписки -->
+    <div class="subscription-form">
+        <h2>Подпишись на новости</h2>
+        <form id="subscribe-form">
+            <input type="email" id="email" placeholder="Введи свой email" required>
+            <button type="submit">Подписаться</button>
+        </form>
+        <p id="response-message"></p>
+    </div>
+
+    <!-- Подключение внешнего скрипта -->
+    <script src="script.js"></script>
 </body>
 </html>
