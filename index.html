@@ -3,98 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Официальный сайт артиста Krutoisuvak">
     <title>Krutoisuvak</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Header Section -->
     <header>
-        <div class="container">
-            <img src="images/photo1.jpg" alt="Krutoisuvak" class="artist-photo">
+        <div class="avatar">
+            <img src="images/photo1.jpg" alt="Krutoisuvak" class="avatar-img">
             <h1>Krutoisuvak</h1>
-            <p>Музыка, которая захватывает дух.</p>
+            <p>Музыка, которая заставит ваше сердце биться быстрее</p>
         </div>
     </header>
 
-    <!-- Описание артиста -->
-    <section class="about-artist">
-        <div class="container">
-            <h2>О мне</h2>
-            <p>Я, Krutoisuvak, — артист, который создает качественную и глубокую музыку, способную передать всю мою эмоциональную палитру. В своей музыке я соединяю различные жанры и стили, чтобы донести до вас то, что чувствую. Следите за моими релизами и наслаждайтесь!</p>
+    <section id="about">
+        <h2>О артисте</h2>
+        <p>Krutoisuvak — молодой и талантливый исполнитель, чьи композиции сочетают в себе элементы различных жанров, от хип-хопа до электронной музыки. Его творчество привлекает внимание своей энергией и уникальным стилем. Его последний релиз, "8 Марта", выйдет 8 марта в 00:00!</p>
+    </section>
+
+    <section id="music">
+        <h2>Моя Музыка</h2>
+        <audio controls>
+            <source src="music/Качевая песня [TubeRipper.com].waw" type="audio/wav">
+            Ваш браузер не поддерживает аудио.
+        </audio>
+    </section>
+
+    <section id="social">
+        <h2>Социальные сети</h2>
+        <div class="social-icons">
+            <a href="https://instagram.com/Krutoisuvak" target="_blank"><img src="logos/instagram-logo.png" alt="Instagram"></a>
+            <a href="https://youtube.com/Krutoisuvak" target="_blank"><img src="logos/youtube-logo.png" alt="YouTube"></a>
+            <a href="https://spotify.com/Krutoisuvak" target="_blank"><img src="logos/spotify-logo.png" alt="Spotify"></a>
+            <a href="https://tiktok.com/@Krutoisuvak" target="_blank"><img src="logos/tiktok-logo.png" alt="TikTok"></a>
+            <a href="https://soundcloud.com/Krutoisuvak" target="_blank"><img src="logos/soundcloud-logo.png" alt="SoundCloud"></a>
+            <a href="https://apple.com/Krutoisuvak" target="_blank"><img src="logos/apple-logo.png" alt="Apple Music"></a>
+            <a href="https://vk.com/Krutoisuvak" target="_blank"><img src="logos/vk-logo.png" alt="VK"></a>
         </div>
     </section>
 
-    <!-- Музыкальные площадки -->
-    <section class="music-platforms">
-        <div class="container">
-            <h2>Слушайте мою музыку на популярных платформах:</h2>
-            <div class="platforms">
-                <a href="https://open.spotify.com/artist/krutoisuvak" target="_blank">
-                    <img src="logos/spotify-logo.png" alt="Spotify" class="social-logo">
-                </a>
-                <a href="https://music.apple.com/artist/krutoisuvak" target="_blank">
-                    <img src="logos/apple-logo.png" alt="Apple Music" class="social-logo">
-                </a>
-                <a href="https://www.youtube.com/channel/krutoisuvak" target="_blank">
-                    <img src="logos/youtube-logo.png" alt="YouTube" class="social-logo">
-                </a>
-                <a href="https://soundcloud.com/krutoisuvak" target="_blank">
-                    <img src="logos/soundcloud-logo.png" alt="SoundCloud" class="social-logo">
-                </a>
-            </div>
+    <section id="gallery">
+        <h2>Галерея</h2>
+        <div class="gallery">
+            <img src="images/images (2).jpeg" alt="Фото 1">
+            <img src="images/images (3).jpeg" alt="Фото 2">
         </div>
     </section>
 
-    <!-- Галерея -->
-    <section class="gallery">
-        <div class="container">
-            <h2>Мои фото</h2>
-            <div class="gallery-images">
-                <img src="images/images (2).jpeg" alt="Фото 1">
-                <img src="images/images (3).jpeg" alt="Фото 2">
-            </div>
-        </div>
-    </section>
-
-    <!-- Релиз -->
-    <section class="release">
-        <div class="container">
-            <h2>Новый релиз</h2>
-            <p>Мой новый трек "8 Марта" выйдет 8 марта в 00:00. Не пропустите!</p>
-        </div>
-    </section>
-
-    <!-- Подписка -->
-    <section class="subscribe">
-        <div class="container">
-            <h2>Подписывайтесь, чтобы не пропустить новинки</h2>
-            <form action="#">
-                <input type="email" placeholder="Ваш email" required>
-                <button type="submit">Подписаться</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <h3>Связь:</h3>
-            <div class="social-links">
-                <a href="https://www.instagram.com/krutoisuvak" target="_blank">
-                    <img src="logos/instagram-logo.png" alt="Instagram" class="social-logo">
-                </a>
-                <a href="https://www.tiktok.com/@krutoisuvak" target="_blank">
-                    <img src="logos/tiktok-logo.png" alt="TikTok" class="social-logo">
-                </a>
-                <a href="https://www.soundcloud.com/krutoisuvak" target="_blank">
-                    <img src="logos/soundcloud-logo.png" alt="SoundCloud" class="social-logo">
-                </a>
-                <a href="https://open.spotify.com/artist/krutoisuvak" target="_blank">
-                    <img src="logos/spotify-logo.png" alt="Spotify" class="social-logo">
-                </a>
-            </div>
-        </div>
+        <p>&copy; 2025 Krutoisuvak. Все права защищены.</p>
     </footer>
 
     <script src="script.js"></script>
