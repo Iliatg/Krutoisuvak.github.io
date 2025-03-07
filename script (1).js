@@ -1,12 +1,9 @@
-// Плавные анимации, например, при прокрутке страницы
-document.addEventListener("DOMContentLoaded", function() {
-    const socialLinks = document.querySelectorAll(".social-logo");
-    socialLinks.forEach(link => {
-        link.addEventListener("mouseover", function() {
-            this.style.transform = "scale(1.2)";
-        });
-        link.addEventListener("mouseout", function() {
-            this.style.transform = "scale(1)";
-        });
+// Плавная анимация для социальных логотипов и картинок
+document.querySelectorAll(".social-icons img, .gallery img").forEach(item => {
+    item.addEventListener("mouseover", () => {
+        item.style.transform = "scale(1.1)";
+    });
+    item.addEventListener("mouseout", () => {
+        item.style.transform = "scale(1)";
     });
 });
