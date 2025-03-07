@@ -1,49 +1,51 @@
+// Слайдер
+let currentIndex = 0;
+const items = document.querySelectorAll('.slider-item');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
 
-// Анимация появления элементов
-document.addEventListener("DOMContentLoaded", function () {
-    let elements = document.querySelectorAll(".animate");
-    elements.forEach(el => {
-        el.classList.add("visible");
+function showSlide(index) {
+    items.forEach((item, i) => {
+        item.style.display = i === index ? 'block' : 'none';
     });
-});
-
-// Таймер обратного отсчета
-function startCountdown() {
-    let eventDate = new Date("2025-04-01T00:00:00").getTime();
-    setInterval(function () {
-        let now = new Date().getTime();
-        let diff = eventDate - now;
-        if (diff < 0) {
-            document.getElementById("timer").innerHTML = "Скоро новый релиз!";
-            return;
-        }
-        let hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        let minutes = Math.floor((diff / (1000 * 60)) % 60);
-        let seconds = Math.floor((diff / 1000) % 60);
-        document.getElementById("timer").innerHTML = `${hours}:${minutes}:${seconds}`;
-    }, 1000);
 }
-startCountdown();
 
-// Форма подписки
-document.getElementById('subscribe-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    let email = document.getElementById('email').value;
-    let responseMessage = document.getElementById('response-message');
-    if (email) {
-        responseMessage.textContent = 'Спасибо за подписку!';
-        responseMessage.style.color = 'green';
-    }
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? items.length - 1 : currentIndex - 1;
+    showSlide(currentIndex);
 });
 
-// Форма обратной связи
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    let name = document.getElementById('name').value;
-    let message = document.getElementById('message').value;
-    let response = document.getElementById('contact-response');
-    if (name && message) {
-        response.textContent = `Спасибо, ${name}, мы получили твое сообщение!`;
-        response.style.color = 'green';
-    }
+nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex === items.length - 1) ? 0 : currentIndex + 1;
+    showSlide(currentIndex);
 });
+
+// Таймер
+const countdown = document.getElementById('timer');
+const eventDate = new Date('2025-12-31T00:00:00');
+
+function updateTimer() {
+    const now = new Date();
+    const remainingTime = eventDate - now;
+    
+    const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+    
+    countdown.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+
+setInterval(updateTimer, 1000);
+
+// Модальное окно
+const contactBtn = document.getElementById('contact-btn');
+const modal = document.getElementById('modal');
+const closeBtn = document.getElementById('close');
+
+contactBtn.addEventListener('click', () => {
+    modal.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+    modal.style.display =
