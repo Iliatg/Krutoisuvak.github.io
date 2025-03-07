@@ -3,103 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сайт Артиста</title>
+    <title>Krutoisuvak</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
-        <div class="artist-info">
-            <img src="images/photo1.jpg" alt="Фото артиста">
-            <h1>Имя Артиста</h1>
-            <p>Описание артиста и его музыки.</p>
+        <div class="container">
+            <img src="images/photo1.jpg" alt="Krutoisuvak" class="artist-photo">
+            <h1>Krutoisuvak</h1>
+            <p>Музыка, которая захватывает дух.</p>
         </div>
     </header>
 
-    <!-- Слайдер -->
-    <section id="slider">
-        <h2>Галерея</h2>
-        <div class="slider-container">
-            <img class="slider-item" src="images/photo1.jpg" alt="Фото 1">
-            <img class="slider-item" src="images/photo2.jpg" alt="Фото 2">
-            <img class="slider-item" src="images/photo3.jpg" alt="Фото 3">
-        </div>
-        <button id="prev" class="slider-btn">◁</button>
-        <button id="next" class="slider-btn">▷</button>
-    </section>
-
-    <!-- Музыка -->
-    <section id="music">
-        <h2>Слушать Музыку</h2>
-        <audio controls>
-            <source src="audio/song1.mp3" type="audio/mp3">
-            Ваш браузер не поддерживает аудиоформат.
-        </audio>
-    </section>
-
-    <!-- Альбомы -->
-    <section id="albums">
-        <h2>Альбомы</h2>
-        <div class="album-card">
-            <img src="images/album1.jpg" alt="Альбом 1">
-            <h3>Альбом 1</h3>
-            <p>Описание альбома.</p>
-            <audio controls>
-                <source src="audio/song1.mp3" type="audio/mp3">
-            </audio>
-        </div>
-        <div class="album-card">
-            <img src="images/album2.jpg" alt="Альбом 2">
-            <h3>Альбом 2</h3>
-            <p>Описание альбома.</p>
-            <audio controls>
-                <source src="audio/song2.mp3" type="audio/mp3">
-            </audio>
+    <!-- Описание артиста -->
+    <section class="about-artist">
+        <div class="container">
+            <h2>О мне</h2>
+            <p>Я, Krutoisuvak, — артист, который создает качественную и глубокую музыку, способную передать всю мою эмоциональную палитру. В своей музыке я соединяю различные жанры и стили, чтобы донести до вас то, что чувствую. Следите за моими релизами и наслаждайтесь!</p>
         </div>
     </section>
 
-    <!-- Таймер обратного отсчета -->
-    <section id="countdown">
-        <h2>До мероприятия:</h2>
-        <div id="timer"></div>
+    <!-- Музыкальные площадки -->
+    <section class="music-platforms">
+        <div class="container">
+            <h2>Слушайте мою музыку на популярных платформах:</h2>
+            <div class="platforms">
+                <a href="https://open.spotify.com/artist/krutoisuvak" target="_blank">
+                    <img src="logos/spotify-logo.png" alt="Spotify" class="social-logo">
+                </a>
+                <a href="https://music.apple.com/artist/krutoisuvak" target="_blank">
+                    <img src="logos/apple-logo.png" alt="Apple Music" class="social-logo">
+                </a>
+                <a href="https://www.youtube.com/channel/krutoisuvak" target="_blank">
+                    <img src="logos/youtube-logo.png" alt="YouTube" class="social-logo">
+                </a>
+                <a href="https://soundcloud.com/krutoisuvak" target="_blank">
+                    <img src="logos/soundcloud-logo.png" alt="SoundCloud" class="social-logo">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section class="gallery">
+        <div class="container">
+            <h2>Мои фото</h2>
+            <div class="gallery-images">
+                <img src="images/images (2).jpeg" alt="Фото 1">
+                <img src="images/images (3).jpeg" alt="Фото 2">
+            </div>
+        </div>
+    </section>
+
+    <!-- Релиз -->
+    <section class="release">
+        <div class="container">
+            <h2>Новый релиз</h2>
+            <p>Мой новый трек "8 Марта" выйдет 8 марта в 00:00. Не пропустите!</p>
+        </div>
     </section>
 
     <!-- Подписка -->
-    <section id="subscribe">
-        <h2>Подпишитесь на новости</h2>
-        <form action="submit_form.php" method="POST">
-            <input type="email" name="email" placeholder="Ваш email" required>
-            <button type="submit">Подписаться</button>
-        </form>
-    </section>
-
-    <!-- Социальные сети -->
-    <section id="socials">
-        <h2>Следите за мной:</h2>
-        <a href="https://instagram.com" target="_blank">Instagram</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-        <a href="https://facebook.com" target="_blank">Facebook</a>
-    </section>
-
-    <!-- Контакты -->
-    <section id="contact">
-        <button id="contact-btn">Связаться</button>
-    </section>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span id="close">&times;</span>
-            <h3>Связаться с артистом</h3>
-            <form>
-                <input type="text" placeholder="Ваше имя" required>
+    <section class="subscribe">
+        <div class="container">
+            <h2>Подписывайтесь, чтобы не пропустить новинки</h2>
+            <form action="#">
                 <input type="email" placeholder="Ваш email" required>
-                <textarea placeholder="Ваше сообщение" required></textarea>
-                <button type="submit">Отправить</button>
+                <button type="submit">Подписаться</button>
             </form>
         </div>
-    </div>
+    </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Имя Артиста. Все права защищены.</p>
+        <div class="container">
+            <h3>Связь:</h3>
+            <div class="social-links">
+                <a href="https://www.instagram.com/krutoisuvak" target="_blank">
+                    <img src="logos/instagram-logo.png" alt="Instagram" class="social-logo">
+                </a>
+                <a href="https://www.tiktok.com/@krutoisuvak" target="_blank">
+                    <img src="logos/tiktok-logo.png" alt="TikTok" class="social-logo">
+                </a>
+                <a href="https://www.soundcloud.com/krutoisuvak" target="_blank">
+                    <img src="logos/soundcloud-logo.png" alt="SoundCloud" class="social-logo">
+                </a>
+                <a href="https://open.spotify.com/artist/krutoisuvak" target="_blank">
+                    <img src="logos/spotify-logo.png" alt="Spotify" class="social-logo">
+                </a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
