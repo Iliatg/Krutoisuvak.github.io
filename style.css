@@ -5,14 +5,23 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-}
-
-h1, h2 {
     text-align: center;
 }
 
+/* Анимация появления */
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Карточка артиста */
-.artist-card {
+.artist-card, .music-player, .subscription-form, .contact-form, .gallery, .lyrics, .countdown {
     background-color: #fff;
     margin: 20px auto;
     padding: 20px;
@@ -20,31 +29,13 @@ h1, h2 {
     max-width: 600px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
 .artist-photo {
     border-radius: 50%;
-    width: 150px; /* Размер фото */
-    height: 150px; /* Размер фото */
-    object-fit: cover; /* Чтобы фото хорошо вписывалось в круг */
-    margin-bottom: 20px; /* Отступ снизу */
-}
-
-.artist-name {
-    font-size: 2em;
-    margin-top: 20px;
-}
-
-.artist-description {
-    font-size: 1.2em;
-    color: #555;
-    margin-top: 10px;
-}
-
-/* Социальные сети */
-.social-links {
-    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
 .social-icon {
@@ -55,61 +46,38 @@ h1, h2 {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.1em;
 }
 
 .social-icon:hover {
     background-color: #444;
 }
 
-/* Музыкальный плеер */
-.music-player {
-    background-color: #fff;
-    margin: 20px auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Галерея */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-/* Форма подписки */
-.subscription-form {
-    background-color: #fff;
-    margin: 20px auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-input[type="email"] {
-    width: 60%;
-    padding: 10px;
-    margin-right: 10px;
-    font-size: 1em;
+.gallery-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
     border-radius: 5px;
-    border: 1px solid #ccc;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #444;
-}
-
-#response-message {
-    margin-top: 15px;
-    color: green;
+/* Таймер */
+#timer {
+    font-size: 2em;
     font-weight: bold;
+    color: #d9534f;
+}
+
+/* Форма обратной связи */
+textarea {
+    width: 90%;
+    height: 80px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
 }
