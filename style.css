@@ -1,143 +1,88 @@
-/* Общие стили */
+/* Основные стили */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-/* Header */
 header {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 50px 0;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
 }
 
-.artist-photo {
-    width: 200px;
-    height: 200px;
+.avatar {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.avatar-img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 h1 {
     font-size: 36px;
-    margin-top: 20px;
+    margin: 10px 0;
 }
 
 p {
     font-size: 18px;
 }
 
-/* Описание артиста */
-.about-artist {
-    background-color: #fff;
-    padding: 20px 0;
-    text-align: center;
+section {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 800px;
 }
 
-.about-artist h2 {
+h2 {
     font-size: 28px;
+    color: #333;
 }
 
-/* Музыкальные площадки */
-.music-platforms {
-    background-color: #fff;
-    padding: 20px 0;
-    text-align: center;
+.social-icons a {
+    margin: 10px;
+    display: inline-block;
 }
 
-.platforms {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social-logo {
+.social-icons img {
     width: 50px;
     height: 50px;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
-.social-logo:hover {
+.social-icons img:hover {
     transform: scale(1.1);
 }
 
-/* Галерея */
 .gallery {
-    background-color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.gallery-images {
     display: flex;
-    justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.gallery-images img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-}
-
-/* Релиз */
-.release {
-    background-color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-/* Подписка */
-.subscribe {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.subscribe form {
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.subscribe input {
-    padding: 10px;
-    font-size: 16px;
+.gallery img {
     width: 200px;
-    margin-right: 10px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-.subscribe button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #ff4500;
-    color: white;
-    border: none;
-    cursor: pointer;
+.gallery img:hover {
+    transform: scale(1.1);
 }
 
-.subscribe button:hover {
-    background-color: #ff6347;
-}
-
-/* Footer */
 footer {
+    text-align: center;
+    padding: 10px;
     background-color: #333;
     color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
 }
