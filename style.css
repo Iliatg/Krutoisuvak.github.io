@@ -1,84 +1,168 @@
-
-/* Общие стили */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
     color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
     text-align: center;
 }
 
-/* Анимация появления */
-.animate {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Карточка артиста */
-.artist-card, .music-player, .subscription-form, .contact-form, .gallery, .lyrics, .countdown {
-    background-color: #fff;
-    margin: 20px auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.artist-photo {
-    border-radius: 50%;
+header img {
     width: 150px;
     height: 150px;
-    object-fit: cover;
+    border-radius: 50%;
 }
 
-.social-icon {
-    display: inline-block;
-    margin: 10px;
+h1 {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+#slider {
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.slider-container {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.slider-item {
+    width: 100%;
+    display: none;
+}
+
+.slider-item:first-child {
+    display: block;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}
+
+#music {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#subscribe {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#subscribe input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#subscribe button {
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#subscribe button:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#socials a {
+    margin: 0 10px;
+    color: #333;
     text-decoration: none;
-    border-radius: 5px;
 }
 
-.social-icon:hover {
-    background-color: #444;
+#socials a:hover {
+    color: #007bff;
 }
 
-/* Галерея */
-.gallery-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.gallery-container img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 5px;
+.modal-content {
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    background-color: white;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
 }
 
-/* Таймер */
+#contact-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact-btn:hover {
+    background-color: #555;
+}
+
+#close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
 #timer {
     font-size: 2em;
-    font-weight: bold;
-    color: #d9534f;
-}
-
-/* Форма обратной связи */
-textarea {
-    width: 90%;
-    height: 80px;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
+    color: #333;
 }
