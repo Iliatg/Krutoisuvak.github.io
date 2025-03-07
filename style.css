@@ -1,168 +1,143 @@
+/* Общие стили */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
 }
 
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
 header {
     background-color: #333;
-    color: #fff;
-    padding: 20px;
+    color: white;
     text-align: center;
+    padding: 50px 0;
 }
 
-header img {
-    width: 150px;
-    height: 150px;
+.artist-photo {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Описание артиста */
+.about-artist {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.about-artist h2 {
+    font-size: 28px;
+}
+
+/* Музыкальные площадки */
+.music-platforms {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.platforms {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-logo {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.social-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Галерея */
+.gallery {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-images img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Релиз */
+.release {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Подписка */
+.subscribe {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.subscribe form {
+    display: inline-block;
     margin-top: 10px;
 }
 
-#slider {
-    position: relative;
-    width: 80%;
-    margin: 20px auto;
-}
-
-.slider-container {
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-}
-
-.slider-item {
-    width: 100%;
-    display: none;
-}
-
-.slider-item:first-child {
-    display: block;
-}
-
-.slider-btn {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
+.subscribe input {
     padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-#prev {
-    left: 0;
-}
-
-#next {
-    right: 0;
-}
-
-#music {
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#subscribe {
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#subscribe input {
-    padding: 10px;
+    font-size: 16px;
+    width: 200px;
     margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 }
 
-#subscribe button {
+.subscribe button {
     padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
+    font-size: 16px;
+    background-color: #ff4500;
+    color: white;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
 }
 
-#subscribe button:hover {
-    background-color: #555;
+.subscribe button:hover {
+    background-color: #ff6347;
 }
 
+/* Footer */
 footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
     text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
 
-#socials a {
-    margin: 0 10px;
-    color: #333;
-    text-decoration: none;
-}
-
-#socials a:hover {
-    color: #007bff;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-    position: relative;
-    margin: 15% auto;
-    padding: 20px;
-    background-color: white;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 8px;
-}
-
-#contact-btn {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#contact-btn:hover {
-    background-color: #555;
-}
-
-#close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 2em;
-    cursor: pointer;
-}
-
-#timer {
-    font-size: 2em;
-    color: #333;
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
