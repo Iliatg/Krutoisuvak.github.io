@@ -8,14 +8,11 @@
 </head>
 <body>
     <!-- Карточка артиста -->
-    <div class="artist-card">
+    <div class="artist-card animate">
         <div class="artist-info">
-            <!-- Фото артиста -->
             <img src="images/artist-photo.jpg" alt="Фото артиста" class="artist-photo">
             <h1 class="artist-name">Krutoisuvak</h1>
-            <p class="artist-description">
-                Привет, я Krutoisuvak — музыкант и создатель уникальных треков. Добро пожаловать на мой сайт!
-            </p>
+            <p class="artist-description">Привет, я Krutoisuvak — музыкант и создатель уникальных треков. Добро пожаловать на мой сайт!</p>
 
             <!-- Социальные сети -->
             <div class="social-links">
@@ -27,8 +24,14 @@
         </div>
     </div>
 
+    <!-- Таймер до следующего события -->
+    <div class="countdown animate">
+        <h2>До следующего релиза:</h2>
+        <div id="timer">00:00:00</div>
+    </div>
+
     <!-- Музыкальный плеер -->
-    <div class="music-player">
+    <div class="music-player animate">
         <h2>Слушай мою музыку</h2>
         <audio controls>
             <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
@@ -36,8 +39,25 @@
         </audio>
     </div>
 
+    <!-- Галерея -->
+    <div class="gallery animate">
+        <h2>Галерея</h2>
+        <div class="gallery-container">
+            <img src="images/photo1.jpg" alt="Фото 1">
+            <img src="images/photo2.jpg" alt="Фото 2">
+            <img src="images/photo3.jpg" alt="Фото 3">
+        </div>
+    </div>
+
+    <!-- Раздел с текстами песен -->
+    <div class="lyrics animate">
+        <h2>Тексты песен</h2>
+        <p><strong>Название песни:</strong> Lorem Ipsum</p>
+        <p>Текст песни...</p>
+    </div>
+
     <!-- Форма подписки -->
-    <div class="subscription-form">
+    <div class="subscription-form animate">
         <h2>Подпишись на новости</h2>
         <form id="subscribe-form">
             <input type="email" id="email" placeholder="Введи свой email" required>
@@ -46,7 +66,17 @@
         <p id="response-message"></p>
     </div>
 
-    <!-- Подключение внешнего скрипта -->
+    <!-- Форма обратной связи -->
+    <div class="contact-form animate">
+        <h2>Напиши мне</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Твое имя" required>
+            <textarea id="message" placeholder="Твое сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+        <p id="contact-response"></p>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
